@@ -33,7 +33,6 @@ public class SelectionSort implements Sorter
      * Sort an array of comparable objects via selection sort. 
      *
      * @param  a  an array of comparable objects
-     * @param  c  a comparator
      */
     public <T extends Comparable<T>> void sort(T[] a) {
         if(a != null && a.length > 0) {
