@@ -1,8 +1,9 @@
 import java.util.*;
-
 /**
  * An interface of sorting algorithms
  * 
+ * @author Henry Grote
+ * @version 09/25/2020
  */
 public interface Sorter
 {
@@ -18,7 +19,7 @@ public interface Sorter
      *
      * @param  a  an array of comparable objects
      */ 
-    public <T extends Comparable<? super T>> void sort (T[] a);
+    public <T extends Comparable<T>> void sort (T[] a);
     
     /**
      * Sort an array of objects using comparator. 
@@ -26,6 +27,6 @@ public interface Sorter
      * @param  a  an array of objects
      * @param  c  a comparator object
      */ 
-    public <T> void sort (T[] a, Comparator<T> c);
+    public <T extends Comparable<T>> void sort (T[] a, Comparator<T> c);
     
 }
