@@ -1,6 +1,6 @@
 import java.util.*;
 /**
- * Write a description of class InsertionSort here.
+ * Sorts an array via insertion sort.
  *
  * @author Henry Grote
  * @version 09/29/2020
@@ -13,22 +13,26 @@ public class InsertionSort implements Sorter
      * @param  a  an array of ints
      */ 
     public void sort (int[] a) {
-        for (int nextPos = 1; nextPos < a.length; nextPos++) {
-            insert(a, nextPos);
+        if(a != null && a.length > 0) {
+            for (int nextPos = 1; nextPos < a.length; nextPos++) {
+                insert(a, nextPos);
+            }
         }
     }
-    
+
     /**
      * Sort an array of comparable objects via insertion sort. 
      *
      * @param  a  an array of comparable objects
      */ 
     public <T extends Comparable<T>> void sort (T[] a) {
-        for (int nextPos = 1; nextPos < a.length; nextPos++) {
-            insert(a, nextPos);
+        if(a != null && a.length > 0) {
+            for (int nextPos = 1; nextPos < a.length; nextPos++) {
+                insert(a, nextPos);
+            }
         }
     }
-    
+
     /**
      * Sort an array of objects using comparator via insertion sort. 
      *
@@ -36,11 +40,13 @@ public class InsertionSort implements Sorter
      * @param  c  a comparator object
      */ 
     public <T extends Comparable<T>> void sort (T[] a, Comparator<T> c) {
-        for (int nextPos = 1; nextPos < a.length; nextPos++) {
-            insert(a, nextPos, c);
+        if(a != null && a.length > 0) {
+            for (int nextPos = 1; nextPos < a.length; nextPos++) {
+                insert(a, nextPos, c);
+            }
         }
     }
-    
+
     /**
      * Helper method for insertion sorting an array of generics
      * 
@@ -55,7 +61,7 @@ public class InsertionSort implements Sorter
         }
         a[nextPos] = nextVal;
     }
-    
+
     /**
      * Helper method for insertion sorting an array of generics
      * 
@@ -70,7 +76,7 @@ public class InsertionSort implements Sorter
         }
         a[nextPos] = nextVal;
     }
-    
+
     /**
      * Helper method for insertion sorting an array of generics
      * 
