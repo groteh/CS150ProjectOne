@@ -3,7 +3,8 @@ import java.util.*;
 /**
  * An implement of Bubble sort
  * 
- * @author  
+ * @author  Andrew Luo
+ * @version 09/29/2020
  */
 public class BubbleSort implements Sorter
 {
