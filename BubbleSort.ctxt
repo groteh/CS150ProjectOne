@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=BubbleSort
-comment0.text=\r\n\ An\ implement\ of\ Bubble\ sort\r\n\ \r\n\ @author\ \ \r\n
+comment0.text=\r\n\ An\ implement\ of\ Bubble\ sort\r\n\ \r\n\ @author\ \ Andrew\ Luo\r\n\ @version\ 09/29/2020\r\n
 comment1.params=a
 comment1.target=void\ sort(int[])
 comment1.text=\r\n\ Sort\ an\ array\ of\ ints\ using\ bubble\ sort.\ \r\n\r\n\ @param\ \ a\ \ an\ array\ of\ ints\r\n
