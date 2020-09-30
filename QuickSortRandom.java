@@ -1,11 +1,11 @@
 import java.util.*;
 /**
- * Sorts an array via quicksort, using the first element as the pivot.
+ * Write a description of class QuickSortRandom here.
  *
- * @author Henry Grote
- * @version 09/29/2020
+ * @author (your name)
+ * @version (a version number or a date)
  */
-public class QuickSortFirst extends QuickSorter implements Sorter 
+public class QuickSortRandom extends QuickSorter implements Sorter
 {
     /**
      * Returns the desired pivot location in the array
@@ -17,7 +17,7 @@ public class QuickSortFirst extends QuickSorter implements Sorter
      * @return  either first; median of first, middle and last; or a random element, depending on inheritance
      */
     public int pivotLocation(int[] a, int fst, int lst) {
-        return fst;
+        return (int)(Math.random())*(lst-fst) + fst;
     }
     
     /**
@@ -30,7 +30,7 @@ public class QuickSortFirst extends QuickSorter implements Sorter
      * @return  either first; median of first, middle and last; or a random element, depending on inheritance
      */
     public <T extends Comparable<T>> int pivotLocation(T[] a, int fst, int lst) {
-        return fst;
+        return (int)(Math.random())*(lst-fst) + fst;
     }
     
     /**
@@ -43,6 +43,6 @@ public class QuickSortFirst extends QuickSorter implements Sorter
      * @return  either first; median of first, middle and last; or a random element, depending on inheritance
      */
     public <T extends Comparable<T>> int pivotLocation(T[] a, int fst, int lst, Comparator<T> c) {
-        return fst;
+        return (int)(Math.random())*(lst-fst) + fst;
     }
 }

@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.target=QuickSortFirst
-comment0.text=\r\n\ Sorts\ an\ array\ via\ quicksort,\ using\ the\ first\ element\ as\ the\ pivot.\r\n\r\n\ @author\ Henry\ Grote\r\n\ @version\ 09/29/2020\r\n
+comment0.target=QuickSortRandom
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ QuickSortRandom\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=a\ fst\ lst
 comment1.target=int\ pivotLocation(int[],\ int,\ int)
 comment1.text=\r\n\ Returns\ the\ desired\ pivot\ location\ in\ the\ array\r\n\ \r\n\ @param\ \ a\ \ the\ array\ to\ choose\ the\ pivot\ location\ in\r\n\ @param\ \ fst\ \ the\ beginning\ of\ valid\ indicies\r\n\ @param\ \ lst\ \ the\ end\ of\ valid\ indicies\r\n\ \r\n\ @return\ \ either\ first;\ median\ of\ first,\ middle\ and\ last;\ or\ a\ random\ element,\ depending\ on\ inheritance\r\n
