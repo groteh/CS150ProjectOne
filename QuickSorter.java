@@ -96,15 +96,6 @@ public abstract class QuickSorter implements Sorter
      */
     private int partition(int[] a, int fst, int lst) {
         int pivot = a[pivotLocation(a, fst, lst)];
-        if ((a[fst] < a[(fst+lst)/2] && a[(fst+lst)/2] < a[lst]) || (a[lst] < a[(fst+lst)/2] && a[(fst+lst)/2] < a[fst])) {
-            pivot = a[(fst+lst)/2];
-        }
-        else if ((a[(fst+lst)/2] < a[fst] && a[fst] < a[lst]) || (a[lst] < a[fst] && a[fst] < a[(fst+lst)/2])) {
-            pivot = a[fst];
-        }
-        else {
-            pivot = a[lst];
-        }
         int u = fst;
         int d = lst;
         do {

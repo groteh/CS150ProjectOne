@@ -18,10 +18,11 @@ public class QuickSortMedian extends QuickSorter implements Sorter
      */
     public int pivotLocation(int[] a, int fst, int lst) {
         int result;
-        if ((a[fst] < a[(fst+lst)/2] && a[(fst+lst)/2] < a[lst]) || (a[lst] < a[(fst+lst)/2] && a[(fst+lst)/2] < a[fst])) {
-            result = (fst+lst)/2;
+        int med = (fst+lst)/2;
+        if (/*(a[fst] < a[med] && a[med] < a[lst]) ||*/ (a[lst] < a[med] && a[med] < a[fst])) { //median = middle
+            result = med;
         }
-        else if ((a[(fst+lst)/2] < a[fst] && a[fst] < a[lst]) || (a[lst] < a[fst] && a[fst] < a[(fst+lst)/2])) {
+        else if ((a[med] < a[fst] && a[fst] < a[lst]) || (a[lst] > a[fst] && a[fst] > a[med])) { //median = first
             result = fst;
         }
         else {

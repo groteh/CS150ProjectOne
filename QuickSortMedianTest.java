@@ -233,4 +233,53 @@ public class QuickSortMedianTest
         s.sort(test, c);
         assertArrayEquals(check, test);
     }
+
+    @Test
+    public void pivotLocationLMH()
+    {
+        QuickSortMedian quickSor1 = new QuickSortMedian();
+        int[] a = {0, 1, 2};
+        assertEquals(1, quickSor1.pivotLocation(a, 0, 2));
+    }
+    
+    @Test
+    public void pivotLocationLHM()
+    {
+        QuickSortMedian quickSor1 = new QuickSortMedian();
+        int[] a = {0, 2, 1};
+        assertEquals(1, quickSor1.pivotLocation(a, 0, 2));
+    }
+    
+    @Test
+    public void pivotLocationMLH()
+    {
+        QuickSortMedian quickSor1 = new QuickSortMedian();
+        int[] a = {1, 0, 2};
+        assertEquals(1, quickSor1.pivotLocation(a, 0, 2));
+    }
+    
+    @Test
+    public void pivotLocationMHL()
+    {
+        QuickSortMedian quickSor1 = new QuickSortMedian();
+        int[] a = {1, 2, 0};
+        assertEquals(1, quickSor1.pivotLocation(a, 0, 2));
+    }
+    
+    @Test
+    public void pivotLocationHLM()
+    {
+        QuickSortMedian quickSor1 = new QuickSortMedian();
+        int[] a = {2, 0, 1};
+        assertEquals(1, quickSor1.pivotLocation(a, 0, 2));
+    }
+    
+    @Test
+    public void pivotLocationHML()
+    {
+        QuickSortMedian quickSor1 = new QuickSortMedian();
+        int[] a = {2, 1, 0};
+        assertEquals(1, quickSor1.pivotLocation(a, 0, 2));
+    }
 }
+
