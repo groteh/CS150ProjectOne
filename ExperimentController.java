@@ -11,68 +11,111 @@ public class ExperimentController
     public static void main (String[] args){
         ExperimentController e = new ExperimentController();
         Random random = new Random(451);
-        float total=0;
+        /*float total=0;
         // for loop that runs multiple tests of timeAppend method
         for(int i=0;i<5;i++){
             // calculating sum
             total=total+e.timeMergeSortReverse(200000,random.nextInt());
         }
         total=total/5; // average execution time
-        System.out.println(total);
+        System.out.println(total);*/
+        e.memoryUseMeasurementsInteger(200000,random.nextInt());
         
         ExperimentController e1 = new ExperimentController();
         Random random1 = new Random(5);
-        float total1=0;
+        /*float total1=0;
         // for loop that runs multiple tests of timeAppend method
         for(int i=0;i<5;i++){
             // calculating sum
             total1=total1+e1.timeMergeSortReverse(400000,random1.nextInt());
         }
         total1=total1/5; // average execution time
-        System.out.println(total1);
+        System.out.println(total1);*/
+        e1.memoryUseMeasurementsInteger(400000,random.nextInt());
         
         ExperimentController e2 = new ExperimentController();
         Random random2 = new Random(82);
-        float total2=0;
+        /*float total2=0;
         // for loop that runs multiple tests of timeAppend method
         for(int i=0;i<5;i++){
             // calculating sum
             total2=total2+e2.timeMergeSortReverse(600000,random2.nextInt());
         }
         total2=total2/5; // average execution time
-        System.out.println(total2);
+        System.out.println(total2);*/
+        e2.memoryUseMeasurementsInteger(600000,random.nextInt());
         
         ExperimentController e3 = new ExperimentController();
         Random random3 = new Random(665);
-        float total3=0;
+        /*float total3=0;
         // for loop that runs multiple tests of timeAppend method
         for(int i=0;i<5;i++){
             // calculating sum
             total3=total3+e3.timeMergeSortReverse(800000,random3.nextInt());
         }
         total3=total3/5; // average execution time
-        System.out.println(total3);
+        System.out.println(total3);*/
+        e3.memoryUseMeasurementsInteger(800000,random.nextInt());
         
         ExperimentController e4 = new ExperimentController();
         Random random4 = new Random(4512);
-        float total4=0;
+        /*float total4=0;
         // for loop that runs multiple tests of timeAppend method
         for(int i=0;i<5;i++){
             // calculating sum
             total4=total4+e4.timeMergeSortReverse(1000000,random4.nextInt());
         }
         total4=total4/5; // average execution time
-        System.out.println(total4);
+        System.out.println(total4);*/
+        e4.memoryUseMeasurementsInteger(1000000,random.nextInt());
        
     }
     
     /**
-     * Constructor for objects of class ExperimentController
+     * Measuring memory use
      */
-    
-    public ExperimentController()
-    {
+    public void memoryUseMeasurementsInteger(int numberOfItems, int seed) {
+        SelectionSort s = new SelectionSort(); // instanciates sorters
+        BubbleSort b = new BubbleSort();
+        InsertionSort i = new InsertionSort();
+        MergeSort m = new MergeSort();
+        Random r = new Random(seed);
+        Random random = new Random(seed);// Instance of Random
+        int[] array = new int[numberOfItems];
+        for(int x = 0; x < numberOfItems; x++)
+        {
+            array[x]=r.nextInt();
+        }
+        int[] copy = array;
+        long startMemory = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        System.out.println(startMemory);
+        s.sort(copy);
+        long endMemory = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
         
+        long deltaMemory = endMemory-startMemory;
+        System.out.println(startMemory);
+        System.out.println("Selection Sort memory: " + deltaMemory);
+        
+        copy = array;
+        startMemory = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        b.sort(copy);
+        endMemory = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        deltaMemory = endMemory-startMemory;
+        System.out.println("Bubble Sort memory: " + deltaMemory);
+        
+        copy = array;
+        startMemory = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        i.sort(copy);
+        endMemory = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        deltaMemory = endMemory-startMemory;
+        System.out.println("Insertion Sort memory: " + deltaMemory);
+        
+        /*copy = array;
+        startMemory = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        m.sort(copy);
+        endMemory = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+        deltaMemory = endMemory-startMemory;
+        System.out.println("Merge Sort memory: " + deltaMemory);*/
     }
 
     /**
